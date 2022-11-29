@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student data form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="main">
+      <h2 style="color: antiquewhite; font-family:cursive">Student Form</h2>
+      <div class="text">
+
+      <form method="POST" name="student-sheet">
+         <label for="name">Name :</label><br>
+         <input type="text" placeholder="Enter your name" class="inp" id="name" name="Name"><br>
+         <label for="email">Email :</label><br>
+         <input type="email" placeholder="Enter your email" class="inp" id="email" name="Email"><br>
+         <label for="dob">DOB :</label><br>
+         <input type="date" placeholder="Enter your DOB" class="inp" id="dob" name="DOB"><br>
+         <label for="course">Course :</label><br>
+         <select id="course" name="Course">
+            <option value="Course">Course</option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="MBA">MBA</option>
+            <option value="MCA">MCA</option>
+            <option value="M.Tech">M.Tech</option>
+         </select><br>
+         <label for="gender">Gender :</label><br>
+         <input type="radio" name="Gender" id="male" class="gender" value="Male"><label for="male">Male</label><br>
+         <input type="radio" name="Gender" id="female" class="gender" value="Female"><label for="female">Female</label><br>
+         <input type="radio" name="Gender" id="other" class="gender" value="Other"><label for="other">Other</label><br>
+         <label for="address">Address :</label><br>
+         <textarea name="Address" id="address" cols="25" rows="2.5" placeholder=" Enter your Address"></textarea><br>
+         <div class="check">
+         <input type="checkbox" class="inp" id="check" required style="width: 30px 5px auto auto;" name="Checkbox">
+         Accept all --Terms & Conditions
+        </div><br>
+         <button type="submit" name="Submit">Submit</button>
+        <div class="side">
+         <h1 id="hi">Hi, I am</h1><h1 id="prakhar"> Prakhar</h1><br>
+         <p>I am providing a <b style="color: antiquewhite;">Student From.</b><br> you can fill this Form.. </p>
+         <p>If you want see the sheet tap on <b style="color: antiquewhite;">Open</b> button</p><br>
+        
+        <div class="b2">
+          <button type="Open" name="Open">
+          <a href="https://docs.google.com/spreadsheets/d/1zfgEdq2M2CXY9pLU7Nps-R-aCoR1QArckuQOgnnxvSk/edit#gid=0" style="color: white;" target="_blank">Open</a>
+
+          </button>
+        </a>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzUhJ8sfRmfg2F1kK6iXuoG4oTHG3gQ1lZX2H7NR2tJ0-tiJReME-cWC4Gd6MNdzIUn/exec'
+    const form = document.forms['student-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

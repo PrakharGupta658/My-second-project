@@ -1,0 +1,100 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{ 
+    display: flex;
+    justify-content: center;
+    background-image: url(wallpapersden.com_abstract-gradient-hd-shapes_2560x1440.jpg);
+    background-attachment: fixed; 
+    background-size: cover;   
+}
+
+.main{
+    width: 180px;
+    margin: 40px 800px 800px 800px;
+    background-color: rgba(55, 52, 142, 0.518);
+    height: 640px;
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 2px 2px;
+    position: fixed;
+    background-position: center;
+    
+}
+ /* .check{
+    padding: auto;
+    width: 320px;
+    margin: 5px 80px 40px -70px ; 
+} */
+.text{
+    margin: -30px 80px 40px 40px;
+    padding: 30px;
+    color: white;
+}
+input,select,textarea{
+    padding: 10px;
+    margin: 6px 50px;
+    border-radius: 10px;
+    border: none;
+}
+label{
+ font-size: large;
+ font-style: oblique;
+font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(6, 1, 53, 0.99);
+    color:white;
+    box-shadow: 1px 1px 1px 1px;
+
+}
+button:hover{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(17, 4, 131, 0.99);
+    box-shadow: 1px 1px 1px 1px;
+    transform: rotate(2deg);
+    
+}
+    
+h2{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: rgba(6, 1, 53, 0.57);
+    border-radius: 15px;
+}
+textarea{
+    border: none;
+    border-radius: 10px;
+}
+.side{
+    margin: -500px -500px ;
+    /* height: 400px; */
+    width: 250px;
+    font-size:30px;
+}
+p{
+    font-style: italic;
+    font-size: x-large;
+}
+#hi{
+    font-weight: 10;
+    font-family: 'Times New Roman', Times, serif;
+}
+#prakhar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: antiquewhite;
+}
+
+
